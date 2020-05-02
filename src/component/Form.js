@@ -1,5 +1,6 @@
 import React, { Component} from 'react'
 import axios from 'axios'
+import { Server } from 'http'
 
 
 class Form extends Component {
@@ -8,6 +9,7 @@ state = {
     formState: ""
 }
 componentDidMount(){
+    // axios.get("http://localhost:3001/products") <- my route from route folder to get json not working  
 axios.get("https://jsonplaceholder.typicode.com/posts")
 .then((response)=>{
     this.setState({
